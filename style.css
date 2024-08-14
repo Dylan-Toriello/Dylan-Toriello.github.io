@@ -1,0 +1,387 @@
+html{
+    scroll-behavior: smooth;;
+  }
+
+/* scroll to top button */
+#btnScrollToTop{
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    color: #ffffff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: transform 500ms ease;
+}
+#btnScrollToTop:hover{
+    transform: scale(1.05);
+}
+
+
+body{
+    margin: 0px;
+    min-block-size: 100vb;
+   background-image: radial-gradient(at center bottom, rgb(219, 234, 254), rgb(147, 197, 253), rgb(59, 130, 246)); 
+}
+/*.titleContainer{
+    
+}
+*/
+
+#titleName{
+    text-align: center;
+}
+
+
+
+/*nav bar start of editing*/
+
+.topNav{
+    background-image: linear-gradient(to right, rgb(17, 24, 39), rgb(75, 85, 99));
+    display: flex;
+    justify-content: center;
+    
+}
+/* selects the whole unordered list and makes sure text overflow is hidden as well as taking away the underlines*/
+.topNav ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+   
+}
+/* Makes text not have underline and adds some padding and made it bold */
+.topNav a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+}
+.topNav a:hover{
+    background-color: hsl(0, 1%, 45%);
+}
+/*Makes it horizontal since its normal orientation is veritcal*/
+.topNav li{
+    float: left;
+}
+
+/* NavBar end of editing*/
+
+#titleDescription{
+    text-align: center;
+    font-size: 3rem;
+    padding: 0;
+    margin-bottom: 5px;
+}
+#graduate{
+    text-align: center;
+    font-size: 2rem;
+    padding: 0;
+    margin: 0;
+}
+#topDescription{
+    text-align: center;
+    font-size: 1rem;
+}
+/* Made it flex so I could center both elements at the same time*/
+.logoContainer{
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+}
+/* Spaces the elements out and adds a little animation when hovering over them */
+.fa-brands.fa-github.fa-3x{
+    padding-right: 15px;
+    transition: transform 500ms ease;
+}
+.fa-brands.fa-github.fa-3x:hover{
+    transform: scale(1.05);
+}
+.fa-brands.fa-linkedin.fa-3x{
+    transition: transform 500ms ease;
+}
+.fa-brands.fa-linkedin.fa-3x:hover{
+    transform: scale(1.05);
+}
+
+.imageContainer{
+    display: grid;
+    justify-content: center;
+}
+#codingImage{
+    max-width: 625px;
+    max-height: auto;
+    
+}
+.resumeContainer{
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    
+}
+.resumeButton{
+border-radius: 25px;
+  line-height: 50px;
+  height: 50px;
+  text-align: center;
+  width: 250px;
+  cursor: pointer;
+
+
+  color: #ffffff;
+  transition: all 0.5s;
+  position: relative;
+  background-image: linear-gradient(to right, rgb(17, 24, 39), rgb(75, 85, 99));
+}
+
+.resumeButton::before{
+    content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(255, 251, 251, 0.1);
+  transition: all 0.3s;
+  border-radius: 25px;
+}
+.resumeButton:hover::before{
+    opacity: 0 ;
+  transform: scale(0.5,0.5);
+  border-radius: 25px;
+}
+.resumeButton::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    border: 1px solid rgba(255,255,255,0.5);
+    transform: scale(1.2,1.2);
+    border-radius: 25px;
+}
+.resumeButton:hover::after{
+    opacity: 1;
+    transform: scale(1,1);
+    border-radius: 25px;
+  
+}
+.project{
+    font-size: 3rem;
+    text-align: center;
+}
+/* Start of the card container */
+.cardsContainer{
+    display: grid;
+    column-gap: 5rem;
+    margin-left: 5rem;
+}
+:root{
+    --clr-neutral-900: hsl(207,19%,9%);
+    --clr-neutral-100: hsl(0,0%,100%);
+    --clr-neutral-400: radial-gradient(at center bottom, rgb(219, 234, 254), rgb(147, 197, 253), rgb(59, 130, 246));
+}
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+.Cards{
+    display: grid;
+    font-family: "Open Sans", 'Courier New', Courier, monospace;
+    min-height: 50vh;
+    max-width: 35ch;
+    place-items: center;
+    line-height: 1.6;
+    background: var(--clr-neutral-900);
+    background-size: cover;
+    padding: 10rem 0 0;
+    color: var(--clr-neutral-100);
+    background-image: url(youtube.jpg); 
+    background-position: -13em -6em;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition: transform 500ms ease;
+    
+}
+
+
+
+.card-content{
+    /* --padding: 1.5 rem makes it locally scoped and makes it so it is just in card-content */
+    --padding: 1.5rem;
+    padding: var(--padding);
+    background: linear-gradient(hsl(0 0% 0% / 0), hsl(20, 0%, 0% / 0.3)20%, hsl(0 0% 0% / 1)) ;
+    
+    
+    
+    
+}
+
+
+
+
+
+.card-body{
+    color: rgb(255 255 255 / 0.85);
+}
+
+/* Tidying up title width max content makes border (That you can not see) fit the text rather than the block */
+.card-title{
+position: relative;
+width: max-content;
+
+}
+/* Line underneath the title*/
+.card-title::after{
+content: "";
+left: calc(var(--padding) *-1);
+bottom: -2px;
+position: absolute;
+height: 4px;
+width: calc(100% + var(--padding));
+background: var(--clr-neutral-400);
+
+transform-origin: left;
+
+
+transition: transform 500ms ease;
+}
+
+
+
+.button{
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--clr-neutral-900);
+    background-image: var(--clr-neutral-400);
+    padding: 0.5em 1.25em;
+    border-radius: 0.5em;
+    transition: transform 500ms ease;
+}
+
+.button:hover, .button:focus{
+    transform: scale(1.05);
+}
+
+@media(hover){
+.card-content{
+    transform: translateY(65%);
+    transition: transform 500ms ease;
+}
+
+.Cards:hover .card-content, .Cards:focus-within  .card-content{
+    transform: translateY(0);
+    transition-delay: 500ms;
+}
+
+.Cards:hover,.Cards:focus-within{
+    transform: scale(1.05);
+}
+
+
+.Cards:hover .card-title::after, .Cards:focus-within .card-title::after{
+    transform: scaleX(1);
+    
+}
+
+.card-title::after{
+    transform: scaleX(0);
+}
+
+.Cards:focus-within  .card-content{
+
+    transition-duration: 0ms;
+    }
+
+}
+@media (pefers-reduce-motion: reduce){
+    *, 
+    *::before
+    *::after {
+        animation-duration: 0.01ms
+        !important;
+        animation-iteration-count: 1 
+        !important;
+        transition-duration: 0.01ms 
+        !important;
+        scroll-behavior: auto !important;
+        transition-delay:  0ms !important;
+    }
+   
+}
+/* end of card setup and animation */
+.awardsHeader{
+    text-align: center;
+    font-size: 3rem;
+}
+.educationCardContainer{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 100px;
+}
+.educationCardContent{
+   background-image:linear-gradient(rgb(249, 115, 22), rgb(253, 224, 71));
+   text-align: center;
+   padding: 40px 40px;
+    color: #fff;
+    position: relative;
+    border-radius: 15px;
+
+   
+   
+}
+#njitPNG{
+    width: 150px;
+    border-radius: 50%;
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.3);
+    background-color: #fff;
+    padding: 6px;
+    
+    
+}
+.educationCardContent h4{
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.educationCardContent h5{
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+#clubs{
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+#educationCardButton{
+    display: inline-block;
+    background-image: linear-gradient(to right, rgb(17, 24, 39), rgb(75, 85, 99));
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px 16px;
+    margin-bottom: 5px;
+    border-radius: 25px;
+    transition: transform 500ms ease;
+    
+    
+}
+#educationCardButton:hover{
+    transform: scale(1.05);
+}
